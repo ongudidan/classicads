@@ -1,0 +1,85 @@
+2024-07-22 14:43:04 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The directory is not writable by the Web process: /var/www/html/projects/classicads/assets in /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetManager.php:242
+Stack trace:
+#0 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory()
+#2 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish()
+#3 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish()
+#4 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle()
+#5 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/View.php(301): yii\web\AssetManager->getBundle()
+#6 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/View.php(306): yii\web\View->registerAssetBundle()
+#7 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle()
+#8 /var/www/html/projects/classicads/views/layouts/main.php(13): yii\web\AssetBundle::register()
+#9 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/View.php(348): require('...')
+#10 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/View.php(258): yii\base\View->renderPhpFile()
+#11 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile()
+#12 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent()
+#13 /var/www/html/projects/classicads/controllers/SiteController.php(64): yii\base\Controller->render()
+#14 [internal function]: app\controllers\SiteController->actionIndex()
+#15 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#16 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#17 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction()
+#18 /var/www/html/projects/classicads/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#19 /var/www/html/projects/classicads/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest()
+#20 /var/www/html/projects/classicads/index.php(11): yii\base\Application->run()
+#21 {main}
+2024-07-22 14:43:04 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_identity-frontend' => '889e0923f9ffef3657c513335c99fa9bf88ee1cb92ac150ec3c05d45750bfdaca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"isADRpSuY92Cccn0vsCIG_7BAq08Lu5R\",2592000]\";}'
+    '_identity-backend' => 'c8efdfafe184f3c9bb03124a707fd8c17ab33884db9f6a26df1a32d1185b0e26a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"eSmaTOW3OwIYfQlQGuXpXXAiIohdakxh\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/projects/'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_COOKIE' => '_identity-frontend=889e0923f9ffef3657c513335c99fa9bf88ee1cb92ac150ec3c05d45750bfdaca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22isADRpSuY92Cccn0vsCIG_7BAq08Lu5R%22%2C2592000%5D%22%3B%7D; _identity-backend=c8efdfafe184f3c9bb03124a707fd8c17ab33884db9f6a26df1a32d1185b0e26a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22eSmaTOW3OwIYfQlQGuXpXXAiIohdakxh%22%2C2592000%5D%22%3B%7D'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.61 (Debian) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.61 (Debian)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/projects/classicads/index.php'
+    'REMOTE_PORT' => '54734'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/projects/classicads/'
+    'SCRIPT_NAME' => '/projects/classicads/index.php'
+    'PHP_SELF' => '/projects/classicads/index.php'
+    'REQUEST_TIME_FLOAT' => 1721659384.4118
+    'REQUEST_TIME' => 1721659384
+    'ENVIRONMENT' => 'dev'
+    'APP_VERSION' => 'v1'
+    'APP_CODE' => 'omnibase'
+    'APP_NAME' => 'OmniBase'
+    'APP_DEVELOPER' => 'CrackIT Technologies'
+    'CORE_DB_DRIVER' => 'mysql'
+    'CORE_DB_HOST' => 'mysql'
+    'CORE_DB_PORT' => '5432'
+    'CORE_DB_DATABASE' => 'kindness'
+    'CORE_DB_USERNAME' => 'root'
+    'CORE_DB_PASSWORD' => 'root'
+]
